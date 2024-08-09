@@ -1,4 +1,4 @@
-import {rutas} from "./router.js";
+import { rutas } from "./router.js";
 import conectar from "./database";
 
 export const mostrarTareas = async(req, res)=>{
@@ -25,6 +25,7 @@ export const crearTarea = async(req, res)=>{
     res.send("Se creo una nueva tarea exitosamente") 
     }
 }
+
 export const editarTarea = async(req, res)=>{
     const conexion = await conectar();
     const { title,description,isComplete } = req.body
@@ -47,7 +48,8 @@ export const buscarTarea = async(req, res)=>{
     }else{const [ consulta ] = await conexion.query(`SELECT id, title, description, isComplete FROM TASKS where id = ${id}`)
     res.send(consulta)
         }
-    }
+}
+
 export const eliminarTarea = async(req, res)=>{
     const conexion = await conectar();
     const id = parseInt(req.params.id)

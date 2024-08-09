@@ -1,5 +1,6 @@
 const rutas = require("express").Router();
-import { mostrarTareas,
+import { 
+    mostrarTareas,
     editarTarea,
     eliminarTarea,
     buscarTarea
@@ -13,3 +14,4 @@ rutas.put("/tasks/:id", editarTarea)
 rutas.delete("/tasks/:id", eliminarTarea)
 
 export {rutas};
+//rutas.post("/tasks", body("title").isString().notEmpty().legth({ min: 5, max:10}) crearTarea)
