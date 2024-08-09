@@ -6,7 +6,6 @@ const conectar = async(req, res)=>{
         user: "root",
         password: "",
         database: "tasks_db"
-
     })
 }
 
