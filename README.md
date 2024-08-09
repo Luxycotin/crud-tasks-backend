@@ -1,2 +1,2 @@
 # crud-tasks-backend
-#Este es un trabajo de diagnostico, donde se realiza un CRUD con validaciones, y ademas se usa un servidor mysql donde se guarda toda la información
+#Este rabajo de diagnostico tuve que comenzarlo de nuevo varias veces, disculpe la mala organización y la sintaxis, donde se realiza un CRUD con validaciones, y ademas se usa un servidor mysql donde se guarda toda la información.
