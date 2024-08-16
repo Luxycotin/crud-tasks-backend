@@ -2,7 +2,7 @@ import express, { json } from "express"
 import cors from "cors"
 import morgan from "morgan"
 
-import { Router } from "./router.js"
+import { rutas } from "./router.js"
 
 const app = express()
 

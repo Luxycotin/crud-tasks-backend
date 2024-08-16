@@ -1,4 +1,4 @@
-const rutas = require("express").Router();
+const {rutas} = require("express").Router();
 import { 
     mostrarTareas,
     editarTarea,
