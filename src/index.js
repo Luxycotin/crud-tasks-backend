@@ -1,16 +1,18 @@
-import express, { json } from "express"
+
 import cors from "cors"
+import express from "express"
 import morgan from "morgan"
 
-import { rutas } from "./router.js"
+import { taskRouter } from "./routes.js"
 
-const app = express()
+const app = express();
 
-app.use(cors())
-app.use(json())
-app.use(morgan("dev"))
-app.use(require("./router"))
+app.use(cors());
+app.use(morgan("dev"));
+app.use(express.json());
 
-app.listen(3000, ()=> {console.log("Servidor corriendose con éxito en el puerto 3000")});
+app.use("/tasks", taskRouter)//
 
-//Se crearía un pc 
+app.listen(3000, () => {
+  console.log("Serivdor corriendse con éxito en el puerto 3000")
+})
